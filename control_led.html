@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Controle LED</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <script href="/js/boostrap" src="js/bootstrap.min.js"></script>
+    <script href="/js/boostrap" src="js/jquery-3.6.1.min"></script>
+
+</head>
+
+    <body role="document">
+        <div class="container theme-showcase" role="main">
+            <br>
+            <div class="jumbotron">
+                <p><h2>Controle do LED</h2></p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <table class="table table-bordered">
+                            <tbody>
+                            <tr>
+                                <td><b>LED</b></td>
+                                <td>
+                                    <div class="btn-group" role="led" aria-label="...">
+
+                                        {% if led %}
+                                        <button type="button" class="btn btn-sucess"
+    onclick="window.location.href='/led/1';">Ligado </button>
+                                        <button type="button" class="btn btn-default"
+    onclick="window.location.href='/led/0';">Desligado </button>
+
+                                        {% else %}
+                                        <button type="button" class="btn btn-default"
+    onclick="window.location.href='/led/1';"> Ligar </button>
+                                        <button type="button" class="btn btn-danger"
+    onclick="window.location.href='/led/0';"> Desligar </button>
+                                        {% endif %}
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+
